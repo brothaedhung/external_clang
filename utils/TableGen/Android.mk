@@ -17,6 +17,8 @@ LOCAL_MODULE := clang-tblgen
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(clang_tablegen_SRC_FILES)
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-cpp-option,-Qunused-arguments)
+
 REQUIRES_EH := 1
 REQUIRES_RTTI := 1
 
