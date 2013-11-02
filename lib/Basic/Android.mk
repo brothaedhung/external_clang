@@ -47,6 +47,8 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
+
 include $(CLANG_HOST_BUILD_MK)
 include $(CLANG_VERSION_INC_MK)
 include $(CLANG_TBLGEN_RULES_MK)

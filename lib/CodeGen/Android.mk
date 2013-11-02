@@ -64,6 +64,8 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(clang_codegen_SRC_FILES)
 TBLGEN_TABLES := $(clang_codegen_TBLGEN_TABLES)
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
+
 include $(CLANG_HOST_BUILD_MK)
 include $(CLANG_VERSION_INC_MK)
 include $(CLANG_TBLGEN_RULES_MK)

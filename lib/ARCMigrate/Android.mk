@@ -43,6 +43,8 @@ LOCAL_SRC_FILES := $(clang_arc_migrate_SRC_FILES)
 LOCAL_MODULE := libclangARCMigrate
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
+
 include $(CLANG_HOST_BUILD_MK)
 include $(CLANG_TBLGEN_RULES_MK)
 include $(BUILD_HOST_STATIC_LIBRARY)

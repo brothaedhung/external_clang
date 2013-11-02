@@ -39,6 +39,7 @@ clang_serialization_SRC_FILES :=\
 
 LOCAL_SRC_FILES := $(clang_serialization_SRC_FILES)
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
 
 include $(CLANG_HOST_BUILD_MK)
 include $(CLANG_TBLGEN_RULES_MK)
