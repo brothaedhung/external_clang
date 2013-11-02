@@ -2,6 +2,7 @@ LOCAL_CFLAGS :=	\
 	-pedantic	\
 	-Wcast-qual	\
 	-Wno-long-long	\
+	-fno-strict-aliasing \
 	$(LOCAL_CFLAGS)
 
 LOCAL_CPPFLAGS := \

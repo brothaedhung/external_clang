@@ -10,6 +10,8 @@ BUILT_SOURCES = Attrs.inc AttrImpl.inc AttrDump.inc \
 
 TABLEGEN_INC_FILES_COMMON = 1
 
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-option,-Qunused-arguments)
+
 include $(CLANG_LEVEL)/Makefile
 
 $(ObjDir)/Attrs.inc.tmp : $(TD_SRC_DIR)/Attr.td $(CLANG_TBLGEN) \

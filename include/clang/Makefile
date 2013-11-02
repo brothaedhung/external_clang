@@ -1,6 +1,8 @@
 CLANG_LEVEL := ../..
 DIRS := AST Basic Driver Lex Parse Sema Serialization
 
+LOCAL_CFLAGS := -fno-strict-aliasing
+
 include $(CLANG_LEVEL)/Makefile
 
 install-local::

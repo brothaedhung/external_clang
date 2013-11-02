@@ -29,9 +29,9 @@ subdirs := $(addprefix $(LOCAL_PATH)/,$(addsuffix /Android.mk, \
 
 LOCAL_CFLAGS := $(call-cc-option,-Qunused-arguments)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 include $(LOCAL_PATH)/clang.mk
 include $(LOCAL_PATH)/host_shared_clang.mk
 
 include $(subdirs)
-
-LOCAL_CFLAGS += -fno-strict-aliasing

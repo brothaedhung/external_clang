@@ -24,6 +24,8 @@ LOCAL_WHOLE_STATIC_LIBRARIES := \
 
 LOCAL_SHARED_LIBRARIES := libLLVM
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 ifeq ($(HOST_OS),windows)
   LOCAL_LDLIBS := -limagehlp -lpsapi
 else
